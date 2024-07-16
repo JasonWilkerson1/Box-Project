@@ -1,0 +1,86 @@
+.body-container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 5px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.first-image {
+    width: 500px;
+    height: auto;
+    margin-right: 25px;
+}
+
+.first-text {
+    padding-left: 35px;
+    text-align: left;
+    font-size: 22px;
+    color: black;
+}
+
+.second-image {
+    width: 500px;
+    height: auto;
+    margin-left: 25px;
+}
+
+.second-text {
+    padding-right: 35px;
+    text-align: left;
+    font-size: 22px;
+    color: black;
+}
+
+.third-text {
+    display: block;
+    margin-left: 75px;
+    margin-right: 75px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    text-align: left;
+    font-size: 20px;
+    color: black;
+}
+
+.fourth-text {
+    display: block;
+    margin-left: 75px;
+    margin-right: 75px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+}
+
+.img-six{
+    margin-bottom: 50px;
+}
+
+.second-body-container {
+    display: grid;
+    align-items: top;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 5px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.map-two{
+    width: 70%;
+    height: auto;
+}
+
+.map-one{
+    margin-left: 35px;
+}
+
+.video-container{
+    display: block;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    
+}

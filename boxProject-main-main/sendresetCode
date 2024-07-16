@@ -1,0 +1,88 @@
+import random
+import string
+import smtplib
+import time
+from email.message import EmailMessage
+from flask import Flask, request, render_template, jsonify
+
+app = Flask(__name)
+
+# Dictionary to store reset code and timestamp
+reset_codes = {}
+
+# Function to generate a random reset code with a timestamp
+def generate_reset_code(length=6):
+    reset_code = ''.join(random.choice(string.digits) for _ in range(length))
+    timestamp = time.time()
+    return reset_code, timestamp
+
+# Function to send the reset code to the user's email
+def send_reset_code_email(recipient_email, reset_code):
+    msg = EmailMessage()
+    msg.set_content(f'Your password reset code: {reset_code}')
+    msg['Subject'] = 'Password Reset Code'
+    msg['From'] = 'group8holston@gmail.com'  # Replace with your email
+    msg['To'] = recipient_email  # Use the recipient's email address
+
+    with smtplib.SMTP('your_smtp_server.com', 587) as server:  # Replace with your SMTP server
+        server.starttls()
+        server.login('group8holston@gmail.com', 'Olemi$$24')  # Replace with your email credentials
+        server.send_message(msg)
+
+# Function to check if a user is an admin
+def is_admin(username):
+   # Function to check if a user is an admin
+def is_admin(username):
+    # Check if the username starts with "Admin" (case-insensitive)
+    return username.lower().startswith("admin")
+
+# Function to render the admin page
+def render_admin_page(username):
+    if is_admin(username):
+        return render_template('admin.html') //name of admin page
+    else:
+        return "Access denied. Only admins can access this page."
+
+@app.route('/admin', methods=['GET'])
+def admin():
+    # Get the username from the logged-in admin (you need to implement admin authentication)
+    username = 'admin'  # Replace with the actual username of the logged-in admin
+
+    # Check if the user is an admin
+    if is_admin(username):
+        return render_admin_page(username)
+    else:
+        return "Access denied. Only admins can access this page."
+
+@app.route('/generate_reset_code', methods=['GET', 'POST'])
+def generate_reset_code():
+    # Get the username of the admin requesting the code generation
+    username = 'admin'  # Replace with the actual username of the admin
+
+    if request.method == 'GET':
+        # Render a form for the admin to input the recipient's email
+        return render_template('email for user')
+
+    if request.method == 'POST':
+        # Check if the user is an admin
+        if is_admin(username):
+            recipient_email = request.form.get('recipient_email')
+            
+            if not recipient_email:
+                return "Recipient email is required."
+
+            # Generate a reset code and timestamp
+            reset_code, timestamp = generate_reset_code()
+
+            # Store the reset code and timestamp in the dictionary
+            reset_codes[recipient_email] = (reset_code, timestamp)
+
+            # Send the reset code to the specified email
+            send_reset_code_email(recipient_email, reset_code)
+            
+            return "Reset code generated and sent to the specified email."
+        else:
+            return "Access denied. Only admins can generate reset codes."
+
+if __name__ == '__main__':
+    app.run(debug=True)

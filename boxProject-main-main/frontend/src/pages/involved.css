@@ -1,0 +1,61 @@
+.form-list {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.content-body {
+    display: block;
+    margin-left: 75px;
+    margin-right: 75px;
+    text-align: left;
+    font-size: 20px;
+}
+
+.quick-links {
+    margin-left: 100px;
+    margin-bottom: 50px;
+}
+
+/* Style for the dropdown content */
+.si-dropdown-content {
+    display: block;
+    text-align: left;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    border: 1px solid blue;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+}
+
+/* Style for the dropdown headings */
+.si-dropdown-header-text {
+    cursor: pointer;  
+    display: inline-block;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.oi-dropdown-content {
+    display: block;
+    text-align: left;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    border: 1px solid blue;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+}
+
+/* Style for the dropdown headings */
+.oi-dropdown-header-text {
+    cursor: pointer;  
+    display: inline-block;
+    font-size: 20px;
+    text-decoration: underline;
+}
+

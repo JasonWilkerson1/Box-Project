@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply a background color and style to the body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Style the header/navbar */
+/* .navbar {
+  position: fixed;
+  top: 0;
+  background-color: black;
+  color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+} */
+
+.navbar a {
+  text-decoration: none;
+  color: red;
+  margin: 0 15px;
+}
+
+/* Style the logo images */
+.navbar img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Style the navigation links */
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+/* Style the main content sections */
+.blue-section {
+  background-color: black;
+  color: white;
+  padding: 60px;
+  margin: 0px 0;
+}
+
+.white-section {
+  background-color: white;
+  color: #333;
+  padding: 40px;
+  margin: 20px 0;
+}
+
+/* Style the footer */
+footer {
+  background-color: white;
+  color: #333;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Center the h1 and p elements in sections */
+h1, p {
+  text-align: center;
+}
+
+/* Center the header text in sections */
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Adjust spacing around images */
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+main {
+  padding-top: 150px; /* Adjust as needed to match the navbar's height */
+}
+
+.body-header{
+  font-size: 42px;
+}
+.body-content{
+  font-size: 22px;
+}
+.body-section-container{
+  padding-top: 45px;
+  margin-bottom: 25px;
+}
+.CNFM-logo{
+  margin-bottom: 100px;
+}

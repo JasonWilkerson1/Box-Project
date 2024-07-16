@@ -1,0 +1,67 @@
+.image-carousel-container {
+  display: flex;
+  justify-content: center;
+}
+
+.image-and-text {
+  display: flex;
+  align-items: center;
+}
+
+.image-carousel {
+  /* Styles for the image column */
+  max-width: 80%;
+  position: relative;
+  /* Set a fixed height to maintain aspect ratio */
+  width:1000px;
+  height:450px;
+}
+
+.carousel-image {
+  /* Set both max-width and max-height to maintain aspect ratio */
+  max-width: 100%;
+  max-height: 100%; /* Set the maximum height to match the maximum width */
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  font-size: 24px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+
+.image-text {
+  /* Styles for the text column */
+  /* max-width: 50%;
+  padding: 0px;
+  height: 600px; /* Set the height to match the image carousel's height */
+  /* overflow: auto; Add overflow to enable scrolling if text overflows */
+} 
+
+.image-text p {
+  /* Style for the text content */
+  /* max-width: 50%;
+  padding: 20px;
+  height: 600px; /* Set the height to match the image carousel's height */
+  /* overflow: auto; /* Add overflow to enable scrolling if text overflows */
+  /* font-size: 30px;
+  position: center;
+  color: #333;
+  font-family: Georgia, 'Times New Roman', Times, serif;  */
+
+}
